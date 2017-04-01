@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>All products in Webstore</title>
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap.css" th:href="@{/bootstrap.css}"/>
+</head>
+<body>
+<section>
+    <div th:class="jumbotron">
+        <div th:class="container">
+            <h1>Products</h1>
+            <p>All products currently available in our store</p>
+        </div>
+    </div>
+</section>
+<section th:class="container">
+    <div th:class="row">
+        <div th:class="col-sm-5" style="padding-bottom: 15px">
+            <div th:class="thumbnail">
+                <div th:class="caption">
+                    <h3 th:text="${products.name}"></h3>
+                    <p th:text="${products.description}"></p>
+                    <p th:text="(${products.unitPrice} + ' PLN')"></p>
+                    <p th:text="'Liczba sztuk w magazynie: ' + ${products.unitsInStock}"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+</body>
+</html>
