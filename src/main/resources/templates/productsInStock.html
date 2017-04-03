@@ -16,13 +16,13 @@
 </section>
 <section th:class="container">
     <div th:class="row">
-        <div th:class="col-sm-5" style="padding-bottom: 15px">
+        <div class="col-sm-6 col-md-3" style="padding-bottom: 15px" th:each="product : ${products}">
             <div th:class="thumbnail">
                 <div th:class="caption">
-                    <h3 th:text="${products.name}"></h3>
-                    <p th:text="${products.description}"></p>
-                    <p th:text="(${products.unitPrice} + ' PLN')"></p>
-                    <p th:text="'Liczba sztuk w magazynie: ' + ${products.unitsInStock}"></p>
+                    <h3 th:text="${product.name}"></h3>
+                    <p th:text="${product.description}"></p>
+                    <p th:text="(${product.unitPrice} + ' PLN')"></p>
+                    <p th:text="'Liczba sztuk w magazynie: ' + ${product.unitsInStock}"></p>
                 </div>
             </div>
         </div>
