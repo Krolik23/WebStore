@@ -18,7 +18,7 @@ import java.util.List;
 public class productController {
 
     @Autowired
-    public ProductRepository productRepository;
+    private ProductRepository productRepository;
 
     @RequestMapping("/products")
     public String listOfProducts(Model model){
